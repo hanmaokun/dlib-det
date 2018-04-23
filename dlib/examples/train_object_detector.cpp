@@ -271,7 +271,7 @@ int main(int argc, char** argv)
             trainer.set_c(C);
             trainer.set_epsilon(eps);
 
-            // Now make sure all the boxes are obtainable by the scanner.  
+            // Now, make sure all the boxes are obtainable by the scanner.
             std::vector<std::vector<rectangle> > removed;
             removed = remove_unobtainable_rectangles(trainer, images, object_locations);
             // if we weren't able to get all the boxes to match then throw an error 
@@ -328,7 +328,7 @@ int main(int argc, char** argv)
 
 
 
-        // The rest of the code is devoted to testing an already trained object detector.
+        // The rest of the code is devoted to test an already trained object detector.
 
         if (parser.number_of_arguments() == 0)
         {

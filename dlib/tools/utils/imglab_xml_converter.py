@@ -127,13 +127,13 @@ def mean(numbers):
 
 def img_stats():
     import matplotlib.pyplot as plt
-    src_img_folder = data_loc + "/data_ssd_id_train/"
+    src_img_folder = "/home/nlp/bigsur/tmp/chanxian_shuju_xsz"
     heights = []
     widths = []
     ratios = []
     ctr = 0
     for root, dir_names, file_names in os.walk(src_img_folder):
-        for file_name in fnmatch.filter(file_names, "*.jpg"):
+        for file_name in fnmatch.filter(file_names, "*.JPG"):
             jpg_file_path = os.path.join(root, file_name)
             img_data = cv2.imread(jpg_file_path)
             (h, w) = img_data.shape[:2]
